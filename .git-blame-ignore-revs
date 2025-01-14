@@ -53,3 +53,6 @@ ceef92f5d6f3d4066564d41b5165351df7cb5fbb
 # Format more code
 39e36746ce8b5a254e0c276bc3cdbff9842d1224
 
+
+# Scala Steward: Reformat with scalafmt 3.8.4
+cd6bff469cfe3f6dfa3efa242e752e28db0dc3cb
