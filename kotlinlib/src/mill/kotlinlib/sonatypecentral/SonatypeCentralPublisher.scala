@@ -1,3 +1,4 @@
+/*
 package mill.kotlinlib.sonatypecentral
 
 import com.lumidion.sonatype.central.client.core.{
@@ -133,3 +134,4 @@ class SonatypeCentralPublisher(
     }
   }
 }
+*/
