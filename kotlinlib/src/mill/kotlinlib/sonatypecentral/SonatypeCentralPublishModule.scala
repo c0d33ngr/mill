@@ -1,3 +1,4 @@
+/*
 package mill.kotlinlib.sonatypecentral
 
 import com.lumidion.sonatype.central.client.core.{PublishingType, SonatypeCredentials}
@@ -150,3 +151,4 @@ object SonatypeCentralPublishModule extends ExternalModule {
 
   lazy val millDiscover: mill.define.Discover = mill.define.Discover[this.type]
 }
+*/
