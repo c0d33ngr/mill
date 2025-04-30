@@ -68,10 +68,10 @@ class MillBuildRootModule()(implicit
   }
 
   override def mandatoryMvnDeps = Task {
-    Seq(mvn"com.lihaoyi::mill-libs:${Versions.millVersion}") ++
+    Seq(mvn"io.github.c0d33ngr::mill-libs:${Versions.millVersion}") ++
       // only include mill-runner for meta-builds
       Option.when(rootModuleInfo.projectRoot / os.up != rootModuleInfo.topLevelProjectRoot) {
-        mvn"com.lihaoyi::mill-runner-meta:${Versions.millVersion}"
+        mvn"io.github.c0d33ngr::mill-runner-meta:${Versions.millVersion}"
       }
   }
 
@@ -84,7 +84,7 @@ class MillBuildRootModule()(implicit
     ) ++ Seq(
       // Needed at runtime to instantiate a `mill.eval.EvaluatorImpl` in the `build.mill`,
       // classloader but should not be available for users to compile against
-      mvn"com.lihaoyi::mill-core-eval:${Versions.millVersion}"
+      mvn"io.github.c0d33ngr::mill-core-eval:${Versions.millVersion}"
     )
   }
 
