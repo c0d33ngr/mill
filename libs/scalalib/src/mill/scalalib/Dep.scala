@@ -208,7 +208,7 @@ object Dep {
    */
   private[mill] def millProjectModule(artifactName: String, artifactSuffix: String = "_3"): Dep = {
     // we don't use `ivy` string context here to avoid a cyclic dependency
-    val dep = s"com.lihaoyi:${artifactName}${artifactSuffix}:${Versions.millVersion}"
+    val dep = s"io.github.c0d33ngr:${artifactName}${artifactSuffix}:${Versions.millVersion}"
     Dep.parse(dep)
   }
 
