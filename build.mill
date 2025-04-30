@@ -19,8 +19,8 @@ import mill.define.Cross
 import scala.util.Properties
 
 object Settings {
-  val pomOrg = "com.lihaoyi"
-  val githubOrg = "com-lihaoyi"
+  val pomOrg = "io.github.c0d33ngr"
+  val githubOrg = "io.github.c0d33ngr"
   val githubRepo = "mill"
   val projectUrl = s"https://github.com/${githubOrg}/${githubRepo}"
   val changelogUrl = s"${projectUrl}#changelog"
@@ -320,7 +320,7 @@ def millVersion: T[String] = Task {
     // sure we include local dirty changes when iterating locally.
     if (isCI()) vcsState.copy(dirtyHash = None).format()
     else vcsState.format()
-  } else "SNAPSHOT"
+  } else "5.5.4"
 }
 
 def millLastTagTruth: T[String] = Task {
@@ -334,7 +334,7 @@ def millLastTag: T[String] = Task {
     VcsVersion.calcVcsState(Task.log).lastTag.getOrElse(
       sys.error("No (last) git tag found. Your git history seems incomplete!")
     )
-  else "SNAPSHOT"
+  else "5.5.4"
 }
 
 def millDownloadPrefix = Task {
