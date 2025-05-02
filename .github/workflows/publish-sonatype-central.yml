@@ -1,5 +1,5 @@
 # .github/workflows/publish-artifacts.yml
-name: Publish Artifacts
+name: Publish Artifacts to Sonatype Central
 on:
   push:
     tags:
