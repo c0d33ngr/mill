@@ -320,7 +320,7 @@ def millVersion: T[String] = Task {
     // sure we include local dirty changes when iterating locally.
     if (isCI()) vcsState.copy(dirtyHash = None).format()
     else vcsState.format()
-  } else "5.5.4"
+  } else "6.6.6"
 }
 
 def millLastTagTruth: T[String] = Task {
@@ -334,7 +334,7 @@ def millLastTag: T[String] = Task {
     VcsVersion.calcVcsState(Task.log).lastTag.getOrElse(
       sys.error("No (last) git tag found. Your git history seems incomplete!")
     )
-  else "5.5.4"
+  else "6.6.6"
 }
 
 def millDownloadPrefix = Task {
